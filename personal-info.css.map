@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/editor/personal-info/personal-info.scss"],
+  "sourcesContent": [".personal-info-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 16px;\r\n    padding: 16px;\r\n\r\n    .section-card {\r\n        border-top: 4px solid var(--color-personal) !important;\r\n    }\r\n}\r\n\r\nmat-card-header {\r\n    margin-bottom: 12px;\r\n}\r\n\r\n.row {\r\n    display: flex;\r\n    gap: 16px;\r\n\r\n    @media (max-width: 600px) {\r\n        flex-direction: column;\r\n        gap: 0;\r\n    }\r\n\r\n    mat-form-field {\r\n        flex: 1;\r\n    }\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}"],
+  "mappings": ";AAAA,CAAA;AACI,WAAA;AACA,kBAAA;AACA,OAAA;AACA,WAAA;;AAEA,CANJ,mBAMI,CAAA;AACI,cAAA,IAAA,MAAA,IAAA;;AAIR;AACI,iBAAA;;AAGJ,CAAA;AACI,WAAA;AACA,OAAA;;AAEA,QAAA,WAAA;AAJJ,GAAA;AAKQ,oBAAA;AACA,SAAA;;;AAGJ,CATJ,IASI;AACI,QAAA;;AAIR,CAAA;AACI,SAAA;;",
+  "names": []
+}

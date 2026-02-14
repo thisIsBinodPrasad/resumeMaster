@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/editor/skills/skills.scss"],
+  "sourcesContent": [".skills-container {\r\n    padding: 16px;\r\n\r\n    .section-card {\r\n        border-top: 4px solid var(--color-skills) !important;\r\n    }\r\n\r\n    mat-card-header {\r\n        margin-bottom: 12px;\r\n    }\r\n}\r\n\r\n.full-width {\r\n    width: 100%;\r\n}"],
+  "mappings": ";AAAA,CAAA;AACI,WAAA;;AAEA,CAHJ,iBAGI,CAAA;AACI,cAAA,IAAA,MAAA,IAAA;;AAGJ,CAPJ,iBAOI;AACI,iBAAA;;AAIR,CAAA;AACI,SAAA;;",
+  "names": []
+}
