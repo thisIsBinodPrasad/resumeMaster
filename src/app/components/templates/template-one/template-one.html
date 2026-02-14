@@ -1,0 +1,93 @@
+<div class="resume-container">
+    <header>
+        <h1 class="name">{{ resume().personalInfo.fullName }}</h1>
+        <div class="contact-row">
+            <span *ngIf="resume().personalInfo.email" class="contact-item"><i>email</i> {{ resume().personalInfo.email
+                }}</span>
+            <span *ngIf="resume().personalInfo.phone" class="contact-item"><i>phone</i> {{ resume().personalInfo.phone
+                }}</span>
+            <span *ngIf="resume().personalInfo.location" class="contact-item"><i>place</i> {{
+                resume().personalInfo.location }}<span *ngIf="resume().personalInfo.zipCode">, {{
+                    resume().personalInfo.zipCode }}</span></span>
+            <a *ngIf="resume().personalInfo.linkedin" [href]="'https://' + resume().personalInfo.linkedin"
+                target="_blank" class="contact-item"><i>link</i> {{ resume().personalInfo.linkedin }}</a>
+            <a *ngIf="resume().personalInfo.website" [href]="'https://' + resume().personalInfo.website" target="_blank"
+                class="contact-item"><i>public</i> {{ resume().personalInfo.website }}</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Education Section -->
+        <section class="section" *ngIf="resume().education.length">
+            <h2 class="section-title">Education</h2>
+            <div class="entry" *ngFor="let edu of resume().education">
+                <div class="entry-header">
+                    <div class="entry-left">
+                        <div class="main-text">{{ edu.institution }}</div>
+                        <div class="sub-text">{{ edu.degree }}</div>
+                    </div>
+                    <div class="entry-right">
+                        <div class="location" *ngIf="resume().personalInfo.location">{{ resume().personalInfo.location
+                            }}</div>
+                        <div class="date">{{ edu.year }}</div>
+                    </div>
+                </div>
+                <p class="description" *ngIf="edu.description">{{ edu.description }}</p>
+            </div>
+        </section>
+
+        <!-- Professional Summary Section -->
+        <section class="section" *ngIf="resume().personalInfo.summary">
+            <h2 class="section-title">Profile Summary</h2>
+            <div class="entry">
+                <p class="description">{{ resume().personalInfo.summary }}</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" *ngIf="resume().experience.length">
+            <h2 class="section-title">Experience</h2>
+            <div class="entry" *ngFor="let exp of resume().experience">
+                <div class="entry-header">
+                    <div class="entry-left">
+                        <div class="main-text">{{ exp.company }}</div>
+                        <div class="sub-text">{{ exp.role }}</div>
+                    </div>
+                    <div class="entry-right">
+                        <div class="location" *ngIf="resume().personalInfo.location">{{ resume().personalInfo.location
+                            }}</div>
+                        <div class="date">{{ exp.duration }}</div>
+                    </div>
+                </div>
+                <p class="description" *ngIf="exp.description">{{ exp.description }}</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" *ngIf="resume().skills.length">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <span class="skill-item" *ngFor="let skill of resume().skills; let last = last">
+                    {{ skill.name }}{{ !last ? ', ' : '' }}
+                </span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" *ngIf="resume().projects.length">
+            <h2 class="section-title">Projects</h2>
+            <div class="entry" *ngFor="let proj of resume().projects">
+                <div class="entry-header">
+                    <div class="entry-left">
+                        <div class="main-text">{{ proj.name }}</div>
+                    </div>
+                    <div class="entry-right">
+                        <div class="tech-stack">{{ proj.technologies?.join(', ') }}</div>
+                    </div>
+                </div>
+                <p class="description">{{ proj.description }}</p>
+                <a class="link" *ngIf="proj.link" [href]="'https://' + proj.link" target="_blank">{{ proj.link }}</a>
+            </div>
+        </section>
+    </main>
+</div>

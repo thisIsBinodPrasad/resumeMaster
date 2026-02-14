@@ -1,0 +1,105 @@
+﻿[33mΓ¥»[39m Building...
+[32mΓ£ö[39m Building...
+Application bundle generation failed. [2.975 seconds] - 2026-02-14T14:05:48.170Z
+
+node.exe : 
+[1m[31m[31mX [41;3
+1m[[41;97mERROR[41;3
+1m][0m [1mTS2532: 
+Object is possibly 
+'undefined'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+At C:\Users\iampr\AppD
+ata\Roaming\npm\ng.ps1
+:24 char:5
++     & "node$exe"  "$
+basedir/node_modules/@
+angular/cli/bin/ng.js"
+ $arg ...
++     ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([1m[31m   
+ [31mX...r-compile    
+r][0m:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+
+    src/app/components
+/templates/template-on
+e/template-one.html:47
+:72:
+[37m      47 Γöé ... 
+<strong>Technologies:<
+/strong> {{ proj.techn
+ologies.[32mjoin[37m
+(', ') }}
+         Γò╡          
+                      
+                      
+   [32m~~~~[0m
+
+  Error occurs in the 
+template of component 
+TemplateOneComponent.
+
+    src/app/components
+/templates/template-on
+e/template-one.ts:9:15
+:
+[37m      9 Γöé   
+templateUrl: [32m'./t
+emplate-one.html'[37m
+,
+        Γò╡           
+     [32m~~~~~~~~~~~~
+~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2532: Object is 
+possibly 
+'undefined'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components
+/templates/template-tw
+o/template-two.html:48
+:59:
+[37m      48 Γöé ... 
+        
+<em>Technologies: {{ p
+roj.technologies.[32m
+join[37m(', ') 
+}}</em>
+         Γò╡          
+                      
+                    
+[32m~~~~[0m
+
+  Error occurs in the 
+template of component 
+TemplateTwoComponent.
+
+    src/app/components
+/templates/template-tw
+o/template-two.ts:9:15
+:
+[37m      9 Γöé   
+templateUrl: [32m'./t
+emplate-two.html'[37m
+,
+        Γò╡           
+     [32m~~~~~~~~~~~~
+~~~~~~~~~[0m
+
+[39m[22m

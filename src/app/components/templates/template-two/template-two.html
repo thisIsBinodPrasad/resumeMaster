@@ -1,0 +1,59 @@
+<div class="resume-container">
+    <header>
+        <h1>{{ resume().personalInfo.fullName }}</h1>
+        <div class="sub-header">
+            <span>{{ resume().personalInfo.location }}<span *ngIf="resume().personalInfo.zipCode">, {{
+                    resume().personalInfo.zipCode }}</span></span>
+            <span *ngIf="resume().personalInfo.phone"> • {{ resume().personalInfo.phone }}</span>
+            <span *ngIf="resume().personalInfo.email"> • {{ resume().personalInfo.email }}</span>
+            <span *ngIf="resume().personalInfo.linkedin"> • {{ resume().personalInfo.linkedin }}</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="experience" *ngIf="resume().experience.length">
+            <h3>Professional Experience</h3>
+            <div class="job" *ngFor="let exp of resume().experience">
+                <div class="job-header">
+                    <strong>{{ exp.company }}</strong>, {{ exp.role }}
+                    <span class="date">{{ exp.duration }}</span>
+                </div>
+                <p>{{ exp.description }}</p>
+            </div>
+        </section>
+
+        <section class="education" *ngIf="resume().education.length">
+            <h3>Education</h3>
+            <div class="edu-item" *ngFor="let edu of resume().education">
+                <div class="edu-header">
+                    <strong>{{ edu.institution }}</strong>, {{ edu.degree }}
+                    <span class="date">{{ edu.year }}</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="summary" *ngIf="resume().personalInfo.summary">
+            <h3>Profile Summary</h3>
+            <p>{{ resume().personalInfo.summary }}</p>
+        </section>
+
+        <section class="projects" *ngIf="resume().projects.length">
+            <h3>Projects</h3>
+            <div class="project" *ngFor="let proj of resume().projects">
+                <div class="project-header">
+                    <strong>{{ proj.name }}</strong>
+                    <span *ngIf="proj.link"> ({{ proj.link }})</span>
+                </div>
+                <p>{{ proj.description }}</p>
+                <p class="tech-stack" *ngIf="proj.technologies?.length">
+                    <em>Technologies: {{ proj.technologies?.join(', ') }}</em>
+                </p>
+            </div>
+        </section>
+
+        <section class="skills" *ngIf="resume().skills.length">
+            <h3>Skills</h3>
+            <p>{{ getSkillsString() }}</p>
+        </section>
+    </main>
+</div>

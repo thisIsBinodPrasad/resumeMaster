@@ -1,0 +1,111 @@
+.editor-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-tabs {
+    flex: 1;
+    overflow-y: auto;
+}
+
+:host ::ng-deep {
+    .mat-mdc-tab-group {
+        background: #fff;
+    }
+
+    .mat-mdc-tab-header {
+        background: white;
+        border-bottom: 3px solid #f1f5f9;
+    }
+
+    .mat-mdc-tab-label-container {
+        padding: 0 16px;
+    }
+
+    .mdc-tab--active .mdc-tab__text-label {
+        font-weight: 700 !important;
+    }
+
+    // Section specific tab styling
+    .mat-mdc-tab:nth-child(1) {
+        .mat-icon {
+            color: var(--color-personal);
+        }
+
+        &.mdc-tab--active {
+            --mdc-tab-indicator-active-indicator-color: var(--color-personal);
+        }
+    }
+
+    .mat-mdc-tab:nth-child(2) {
+        .mat-icon {
+            color: var(--color-education);
+        }
+
+        &.mdc-tab--active {
+            --mdc-tab-indicator-active-indicator-color: var(--color-education);
+        }
+    }
+
+    .mat-mdc-tab:nth-child(3) {
+        .mat-icon {
+            color: var(--color-experience);
+        }
+
+        &.mdc-tab--active {
+            --mdc-tab-indicator-active-indicator-color: var(--color-experience);
+        }
+    }
+
+    .mat-mdc-tab:nth-child(4) {
+        .mat-icon {
+            color: var(--color-skills);
+        }
+
+        &.mdc-tab--active {
+            --mdc-tab-indicator-active-indicator-color: var(--color-skills);
+        }
+    }
+
+    .mat-mdc-tab:nth-child(5) {
+        .mat-icon {
+            color: var(--color-projects);
+        }
+
+        &.mdc-tab--active {
+            --mdc-tab-indicator-active-indicator-color: var(--color-projects);
+        }
+    }
+
+    .mat-mdc-tab-header-pagination {
+        display: none !important;
+    }
+}
+
+.navigation-actions {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    .spacer {
+        flex: 1;
+    }
+
+    button[mat-raised-button] {
+        background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+}
+
+.tab-icon {
+    margin-right: 8px;
+}
+
+:host ::ng-deep .mat-mdc-tab-body-wrapper {
+    flex: 1;
+}

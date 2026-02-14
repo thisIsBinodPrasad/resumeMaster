@@ -1,0 +1,12 @@
+﻿[33mΓ¥»[39m Building...
+[32mΓ£ö[39m Building...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mmain-DRLBEUSJ.js[39m   [2m | [22m[2mmain[22m         [2m | [22m[36m633.92 kB[39m[2m | [22m              [36m129.47 kB[39m
+[32mstyles-7F2Q6CLS.css[39m[2m | [22m[2mstyles[22m       [2m | [22m [36m96.09 kB[39m[2m | [22m                [36m7.02 kB[39m
+
+[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m[1m730.01 kB[22m[2m | [22m              [1m136.49 kB[22m
+
+Application bundle generation complete. [4.447 seconds] - 2026-02-14T14:06:41.997Z
+
+Output location: C:\Users\iampr\.gemini\antigravity\scratch\resume-maker\dist\resume-maker
+

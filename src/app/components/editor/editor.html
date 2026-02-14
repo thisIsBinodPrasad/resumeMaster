@@ -1,0 +1,54 @@
+<div class="editor-container">
+    <mat-tab-group animationDuration="0ms" class="editor-tabs" [selectedIndex]="selectedIndex()"
+        (selectedIndexChange)="selectedIndex.set($event)">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">person</mat-icon>
+                Personal
+            </ng-template>
+            <app-personal-info></app-personal-info>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">school</mat-icon>
+                Education
+            </ng-template>
+            <app-education></app-education>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">work</mat-icon>
+                Experience
+            </ng-template>
+            <app-experience></app-experience>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">stars</mat-icon>
+                Skills
+            </ng-template>
+            <app-skills></app-skills>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="tab-icon">code</mat-icon>
+                Projects
+            </ng-template>
+            <app-projects></app-projects>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div class="navigation-actions no-print">
+        <button mat-button (click)="prevTab()" [disabled]="selectedIndex() === 0">
+            <mat-icon>arrow_back</mat-icon> Previous
+        </button>
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary" (click)="nextTab()" *ngIf="selectedIndex() < 4">
+            Next Step <mat-icon>arrow_forward</mat-icon>
+        </button>
+    </div>
+</div>

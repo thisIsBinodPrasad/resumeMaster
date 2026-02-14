@@ -1,0 +1,24 @@
+<div class="preview-controls no-print">
+    <mat-form-field appearance="outline" class="template-select" style="margin-right: auto;">
+        <mat-label>Resume Template</mat-label>
+        <mat-select [value]="selectedTemplate()" (selectionChange)="selectedTemplate.set($event.value)">
+            <mat-option value="one">Modern Professional</mat-option>
+            <mat-option value="two">Classic Academic</mat-option>
+            <mat-option value="student">Student / Fresh Graduate</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="downloadPDF()">
+        <mat-icon>download</mat-icon> Download PDF
+    </button>
+
+    <button mat-raised-button color="warn" (click)="clearData()">
+        <mat-icon>delete_forever</mat-icon> Clear Data
+    </button>
+</div>
+
+<div class="preview-content">
+    <app-template-one *ngIf="selectedTemplate() === 'one'"></app-template-one>
+    <app-template-two *ngIf="selectedTemplate() === 'two'"></app-template-two>
+    <app-template-student *ngIf="selectedTemplate() === 'student'"></app-template-student>
+</div>

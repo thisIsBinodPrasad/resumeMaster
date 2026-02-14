@@ -1,0 +1,32 @@
+.personal-info-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    .section-card {
+        border-top: 4px solid var(--color-personal) !important;
+    }
+}
+
+mat-card-header {
+    margin-bottom: 12px;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    mat-form-field {
+        flex: 1;
+    }
+}
+
+.full-width {
+    width: 100%;
+}

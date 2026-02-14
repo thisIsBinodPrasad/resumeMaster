@@ -1,0 +1,43 @@
+.experience-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.experience-item {
+    margin-bottom: 16px;
+
+    mat-card {
+        border-top: 4px solid var(--color-experience) !important;
+    }
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    mat-form-field {
+        flex: 1;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+mat-card-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}

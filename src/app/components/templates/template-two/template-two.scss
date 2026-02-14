@@ -1,0 +1,70 @@
+.resume-container {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h1 {
+        margin: 0;
+        font-size: 24pt;
+        text-transform: uppercase;
+    }
+
+    .sub-header {
+        font-size: 11pt;
+        margin-top: 5px;
+    }
+}
+
+h3 {
+    border-bottom: 1px solid #000;
+    font-size: 12pt;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.job,
+.project,
+.edu-item {
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.job-header,
+.edu-header,
+.project-header {
+    font-size: 11pt;
+
+    .date {
+        float: right;
+    }
+}
+
+p {
+    margin: 2px 0;
+    font-size: 11pt;
+}
+
+@media print {
+    .resume-container {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.pdf-export {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}

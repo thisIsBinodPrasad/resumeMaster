@@ -1,0 +1,24 @@
+<div class="skills-container">
+    <mat-card class="section-card">
+        <mat-card-header>
+            <mat-card-title>Skills & Expertise</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Add Skills</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter skills">
+                    <mat-chip-row *ngFor="let skill of skills()" (removed)="remove(skill)" [editable]="true">
+                        {{skill.name}}
+                        <button matChipRemove [attr.aria-label]="'remove ' + skill.name">
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </mat-chip-row>
+                    <input placeholder="New skill..." [matChipInputFor]="chipGrid"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event)" />
+                </mat-chip-grid>
+                <mat-hint>Press Enter or Comma to add a skill</mat-hint>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+</div>
